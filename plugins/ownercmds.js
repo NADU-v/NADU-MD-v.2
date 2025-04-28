@@ -1,6 +1,7 @@
-const { cmd } = require('../command');
-const { exec } = require('child_process');
-const config = require('../config');
+const { fetchJson } = require('../lib/functions')
+const config = require('../config')
+const { cmd, commands } = require('../command')
+
 
 // 1. Shutdown Bot
 cmd({
