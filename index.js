@@ -39,6 +39,14 @@ const port = process.env.PORT || 8000;
 //=============================================
 
 async function connectToWA() {
+//connect mongodb ====================
+const connectDB = require('./lib/mongodb')
+connectDB();
+//============================
+
+
+
+async function connectToWA() {
 console.log("Connecting  NADU-MD 👾...");
 const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/auth_info_baileys/')
 var { version } = await fetchLatestBaileysVersion()
